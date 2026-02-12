@@ -1,0 +1,51 @@
+
+---
+
+# 📁 Level-1-Docker-Foundations/docker-compose.yml
+
+```yaml
+version: "3.9"
+
+services:
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: level1-nginx
+    ports:
+      - "8080:80"
+    networks:
+      - level1-network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: level1-postgres
+    environment:
+      POSTGRES_USER: level1
+      POSTGRES_PASSWORD: level1pass
+      POSTGRES_DB: level1db
+    ports:
+      - "5432:5432"
+    volumes:
+      - level1_pgdata:/var/lib/postgresql/data
+    networks:
+      - level1-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U level1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: level1-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - level1-network
+
+volumes:
+  level1_pgdata:
+
+networks:
+  level1-network:
+    driver: bridge
