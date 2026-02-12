@@ -1,3 +1,7 @@
+# Project Execution Plan (Canonical Roadmap)
+
+## Authoritative plan governing scope, sequence, KPIs, and public execution (Levels 1–4).
+
 Docker-Native Distributed Data Pipeline — Detailed Execution Plan
 
 Purpose: Build a full, utility-producing, observable, and resilient distributed data pipeline using Docker, Docker Compose, Kafka, NiFi, Postgres, Elasticsearch, and streaming/decision logic. The project is public-grade, structured to demonstrate mastery, reproducibility, and engineering rigor.
