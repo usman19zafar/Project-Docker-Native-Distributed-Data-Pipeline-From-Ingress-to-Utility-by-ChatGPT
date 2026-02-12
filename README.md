@@ -3,7 +3,7 @@ This repository is a deliberate, end-to-end engineering project focused on maste
 
 Docker-Native Distributed Data Pipeline — From Ingress to Utility
 
-GitHub Description (≈350 words)
+GitHub Description:
 
 This repository is a deliberate, end-to-end engineering project focused on mastering Docker as the control plane for building, operating, and defending distributed data systems.
 
